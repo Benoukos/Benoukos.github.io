@@ -1,153 +1,612 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Developer Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #000000;
-      color: #51ff00;
-      line-height: 1.6;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 0;
-    }
-
-    h1 {
-      margin-bottom: 5px;
-    }
-
-    .subtitle {
-      color: #9ca3af;
-    }
-
-    .tagline {
-      margin-top: 10px;
-      color: #cbd5f5;
-    }
-
-    section {
-      margin-top: 40px;
-    }
-
-    h2 {
-      border-bottom: 1px solid #1f2937;
-      padding-bottom: 5px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Simple link list (no flexbox) */
-    .links {
-      margin-top: 15px;
-      text-align: center;
-    }
-
-    .link-pill {
-      display: inline-block;
-      padding: 5px 12px;
-      margin: 5px;
-      border-radius: 20px;
-      border: 1px solid #1f2937;
-      font-size: 14px;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      color: #6b7280;
-      font-size: 14px;
-      padding-bottom: 20px;
-    }
-
-    /* Simple image styling */
-    .project-img {
-      margin-top: 8px;
-      width: 300px;
-      border: 1px solid #1f2937;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Thomas Benos — Unity Game Developer from Greece, looking for an internship. Game development, 3D modeling, Blender, web pages, AI-assisted coding.">
+<meta name="keywords" content="Thomas Benos, Unity developer, game developer Greece, Unity game developer, 3D modeling, Blender, video game internship, AI developer, portfolio">
+<meta name="author" content="Thomas Benos">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Thomas Benos — Unity Game Developer">
+<meta property="og:description" content="Unity Game Developer from Greece. Games, 3D modeling, web pages, AI-assisted coding. Looking for an internship.">
+<meta property="og:url" content="https://benoukos.github.io/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="el_GR">
+<meta property="profile:first_name" content="Thomas">
+<meta property="profile:last_name" content="Benos">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Thomas Benos — Unity Game Developer">
+<meta name="twitter:description" content="Unity Game Developer from Greece. Games, 3D modeling, web pages, AI-assisted coding. Looking for an internship.">
+<title>Thomas Benos — Unity Game Developer | Greece</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👤</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Thomas Benos",
+  "alternateName": "SprinterR",
+  "jobTitle": "Unity Video Game Developer",
+  "nationality": "Greek",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "GR"
+  },
+  "email": "grthomas2016yt@gmail.com",
+  "url": "https://benoukos.github.io/",
+  "knowsAbout": ["Unity", "C", "C++", "C#", "JavaScript", "Python", "HTML", "CSS", "Blender 3D Modeling", "Web Development", "AI-assisted Development", "Video Editing", "Photo Editing", "Sound Editing"],
+  "worksFor": { "@type": "Organization", "name": "IEK Delta 360" },
+  "alumniOf": { "@type": "Organization", "name": "IEK Delta 360" },
+  "sameAs": [
+    "https://github.com/Benoukos",
+    "https://www.instagram.com/sprinter__r/"
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#000000;
+    --panel:#000000;
+    --border:#ffffff;
+    --text:#ffffff;
+    --muted:#ffff00;
+    --accent:#00ffff;
+    --accent2:#00ff00;
+    --accent3:#ff8800;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  :focus-visible{
+    outline:3px solid var(--accent);
+    outline-offset:2px;
+    border-radius:4px;
+  }
+  /* ---------- skip link ---------- */
+  .skip-link{
+    position:absolute;
+    top:-60px;
+    left:1rem;
+    background:var(--accent);
+    color:#0d1117;
+    font-weight:700;
+    padding:.6rem 1.2rem;
+    border-radius:8px;
+    text-decoration:none;
+    z-index:100;
+    transition:top .15s ease;
+  }
+  .skip-link:focus{top:1rem;}
+  .container{max-width:860px;margin:0 auto;padding:2rem 1.25rem;}
+  /* ---------- lang button ---------- */
+  .lang-btn{
+    position:fixed;
+    top:1rem;
+    right:1rem;
+    z-index:50;
+    background:var(--panel);
+    color:var(--text);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:.45rem 1rem;
+    font-size:.95rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:border-color .15s ease,transform .15s ease;
+  }
+  .lang-btn:hover{border-color:var(--accent);transform:translateY(-2px);}
+  .lang-status{
+    position:absolute;
+    width:1px;height:1px;
+    overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;
+  }
+  /* ---------- hero ---------- */
+  .hero{
+    text-align:center;
+    padding:3.5rem 1rem 2.5rem;
+    background:linear-gradient(180deg,#10161f 0%,var(--bg) 100%);
+    border-bottom:1px solid var(--border);
+  }
+  .hero h1{font-size:2.6rem;letter-spacing:.5px;}
+  .hero h1 .dot{color:var(--accent);}
+  .hero .tagline{color:var(--muted);font-size:1.1rem;margin-top:.4rem;}
+  .hero .meta{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-top:1.2rem;}
+  .chip{
+    background:var(--panel);
+    border:1px solid var(--border);
+    color:var(--muted);
+    padding:.3rem .9rem;
+    border-radius:999px;
+    font-size:.85rem;
+  }
+  /* ---------- sections ---------- */
+  section{margin-top:2.6rem;}
+  .sec-title{
+    font-size:1.3rem;
+    font-weight:700;
+    margin-bottom:1rem;
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+  }
+  .sec-title .bar{
+    width:4px;height:1.3em;
+    background:var(--accent);
+    border-radius:2px;
+    flex:0 0 auto;
+  }
+  .card{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:1.1rem 1.3rem;
+  }
+  .card + .card{margin-top:.9rem;}
+  p.muted{color:var(--muted);}
+  /* ---------- skills grid ---------- */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:.8rem;
+  }
+  .skill{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:.8rem 1rem;
+    text-align:center;
+    font-weight:600;
+    transition:transform .15s ease,border-color .15s ease;
+  }
+  .skill:hover{transform:translateY(-3px);border-color:var(--accent);}
+  .skill.c{color:#8ca3ff;} .skill.cpp{color:#7ab8ff;} .skill.cs{color:#b062f2;}
+  .skill.html{color:#f0883e;} .skill.css{color:#5f9cea;} .skill.js{color:#f2d16b;}
+  .skill.java{color:#f28a6b;} .skill.py{color:#6bc4d0;} .skill.blender{color:#f2a25c;}
+  .skill.mech{color:#3fb950;} .skill.web{color:#5f8ff2;} .skill.ai{color:#d188ff;}
+  .skill.video{color:#ff6b6b;} .skill.photo{color:#ffb86b;} .skill.sound{color:#4fd8c8;}
+  .skill.git{color:#f85149;}
+  /* ---------- goals ---------- */
+  .goal{
+    display:flex;
+    gap:.9rem;
+    margin-bottom:.9rem;
+  }
+  .goal:last-child{margin-bottom:0;}
+  .goal .num{
+    flex:0 0 2rem;
+    height:2rem;
+    border-radius:50%;
+    background:var(--panel);
+    border:1px solid var(--border);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;color:var(--accent2);
+  }
+  .goal .txt strong{display:block;}
+  /* ---------- footer ---------- */
+  footer{
+    text-align:center;
+    color:var(--muted);
+    font-size:.85rem;
+    margin-top:3rem;
+    padding-bottom:2rem;
+  }
+  /* ---------- background ---------- */
+  #starts{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;}
+  /* ---------- availability banner ---------- */
+  .available{
+    max-width:560px;
+    margin:-1.4rem auto 0;
+    background:#12261b;
+    border:1px solid #238636;
+    border-radius:999px;
+    padding:.55rem 1.2rem;
+    text-align:center;
+    font-weight:600;
+    color:#3fb950;
+  }
+  .available .pulse{
+    display:inline-block;width:9px;height:9px;border-radius:50%;
+    background:#3fb950;margin-right:.5rem;
+    animation:pulse 1.6s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(63,185,80,.5);}
+    70%{box-shadow:0 0 0 10px rgba(63,185,80,0);}
+    100%{box-shadow:0 0 0 0 rgba(63,185,80,0);}
+  }
+  /* ---------- CV button ---------- */
+  .btn{
+    display:inline-block;
+    background:var(--accent);
+    color:#0d1117;
+    font-weight:700;
+    padding:.6rem 1.6rem;
+    border-radius:8px;
+    text-decoration:none;
+    margin-top:.8rem;
+    transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  /* ---------- reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce){
+    .available .pulse{animation:none;}
+    .skill,.btn,.lang-btn{transition:none;}
+  }
+  /* ---------- a11y body classes ---------- */
+  body.large-text{font-size:1.25rem;}
+  body.large-text .hero h1{font-size:3rem;}
+  /* ---------- small screens ---------- */
+  @media (max-width:620px){
+    .skills-grid{grid-template-columns:repeat(2,1fr);}
+    .hero h1{font-size:2rem;}
+  }
+</style>
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Skip to content / Μετάβαση στο περιεχόμενο</a>
+
+  <canvas id="starts" aria-hidden="true"></canvas>
+
+  <button class="lang-btn" id="langBtn" aria-pressed="false" aria-label="Change language">ΕΛ</button>
+  <div class="lang-status" id="langStatus" aria-live="polite"></div>
+
+  <div id="site">
+  <header class="hero">
+    <h1>Thomas<span class="dot">.</span>Benos</h1>
+    <p class="tagline" data-i18n="tagline">Unity Game Developer &amp; Future Mechanic</p>
+    <div class="meta">
+      <span class="chip">🇬🇷 <span data-i18n="chip-greece">Greece</span></span>
+      <span class="chip" data-i18n="chip-age">~21 years old</span>
+      <span class="chip" data-i18n="chip-school">IEK Delta 360 — almost done</span>
+      <span class="chip" data-i18n="chip-intern">Looking for an internship</span>
+    </div>
+  </header>
+
+  <main id="main">
   <div class="container">
-    
-    <header>
-      <h1>Thomas Benos</h1>
-      <p class="subtitle">Web-Dev • JavaScript • Java • C# • Game Dev</p>
-      <p class="tagline">I write code like a chimp, but it works.</p>
-    </header>
+    <div class="available">
+      <span class="pulse" aria-hidden="true"></span><span data-i18n="available">Available for internship — ready to start ASAP</span>
+    </div>
 
-    <section>
-      <h2>About me</h2>
-      <p>
-        I'm a Web-Dev/Game-Dev that is still learning and I also want to be a mechanic.
-      </p>
+    <section aria-labelledby="t-who">
+      <h2 class="sec-title" id="t-who"><span class="bar" aria-hidden="true"></span><span data-i18n="t-who">Who I am</span></h2>
+      <div class="card">
+        <p data-i18n="who">
+          Hey! I'm <strong>Thomas Benos</strong>, a 21-year-old game developer from Greece.
+          I'm wrapping up my studies at <strong>IEK Delta 360</strong> and I'm on the
+          hunt for an internship to get my foot in the door. I love building games,
+          making 3D art, and spending way too much time on anything with wheels
+          and an engine.
+        </p>
+      </div>
     </section>
 
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>Languages: JavaScript, HTML, CSS, C#, C++, Python</li>
-        <li>Frontend: CSS</li>
-        <li>Tools: Git, GitHub, Docker</li>
-        <li>Honorable Mention: Wanna be Mechanic, I know Blender 3D, Photoshop and Video Editing</li>
-      </ul>
+    <section aria-labelledby="t-specialty">
+      <h2 class="sec-title" id="t-specialty"><span class="bar" aria-hidden="true"></span><span data-i18n="t-specialty">My Specialty</span></h2>
+      <div class="card">
+        <p><strong data-i18n="spec1">🎮 Unity Video Game Developer</strong></p>
+        <p class="muted" data-i18n="spec1d">I develop games end-to-end — code, gameplay, and the 3D assets that bring it to life.</p>
+        <p style="margin-top:.6rem"><strong data-i18n="spec2">🌐 Webpages</strong></p>
+        <p class="muted" data-i18n="spec2d">I build websites with HTML, CSS and JS — like this very page! 😄</p>
+      </div>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>Project One</strong> – This is a block of flats it was my second project.
-          <br>
-          <img src="1.png" class="project-img">
-        </li>
+    <section aria-labelledby="t-know">
+      <h2 class="sec-title" id="t-know"><span class="bar" aria-hidden="true"></span><span data-i18n="t-know">What I Know</span></h2>
+      <div class="skills-grid">
+        <div class="skill c" data-i18n="s-c">C</div>
+        <div class="skill cpp" data-i18n="s-cpp">C++</div>
+        <div class="skill cs" data-i18n="s-cs">C#</div>
+        <div class="skill html" data-i18n="s-html">HTML</div>
+        <div class="skill css" data-i18n="s-css">CSS</div>
+        <div class="skill js" data-i18n="s-js">JS</div>
+        <div class="skill java" data-i18n="s-java">JAVA</div>
+        <div class="skill py" data-i18n="s-py">Python</div>
+        <div class="skill web" data-i18n="s-web">Webpages</div>
+        <div class="skill blender" data-i18n="s-blender">Blender 3D</div>
+        <div class="skill mech" data-i18n="s-mech">Motorcycle basics</div>
+        <div class="skill ai" data-i18n="s-ai">AI collab 🧠</div>
+        <div class="skill video" data-i18n="s-video">Video editing 🎬</div>
+        <div class="skill photo" data-i18n="s-photo">Photo editing 📸</div>
+        <div class="skill sound" data-i18n="s-sound">Sound editing 🎧</div>
+        <div class="skill git" data-i18n="s-git">Git</div>
+      </div>
+      <div style="margin-top:.9rem" class="card">
+        <p data-i18n="ai">
+          <strong>🤖 AI-assisted development</strong> — I work with AI tools daily and I'm not shy about it.
+          I always include my AI brothers — without them I'd be slow. Using AI as a teammate to write,
+          debug and speed up code is a real skill — and one I use in every project.
+        </p>
+        <p style="margin-top:.6rem" data-i18n="blender"><strong>🟠 Blender</strong> — low-poly <span class="muted">&amp;</span> mid-high poly 3D modeling</p>
+        <p data-i18n="mech"><strong>🏍️ Mechanics</strong> — motorcycle engine basics (very low-level mechanic)</p>
+      </div>
+    </section>
 
-        <li>
-          <strong>Project Two</strong> – This is my terrain of mars with a little rover i didn't get to finish.
-          <br>
-          <img src="2.png" class="project-img">
-        </li>
+    <section aria-labelledby="t-projects">
+      <h2 class="sec-title" id="t-projects"><span class="bar" aria-hidden="true"></span><span data-i18n="t-projects">My Projects</span></h2>
+      <div class="card">
+        <p><strong data-i18n="proj-unityh">🎮 Unity Games</strong></p>
+        <p class="muted" data-i18n="proj-unityd">A bunch of Unity experiments, course follow-alongs and my own builds — pistol props, mazes, horror scenes, 3D-to-2D sprite tests, and more:</p>
+        <ul style="margin-top:.7rem;padding-left:1.2rem;color:var(--muted)">
+          <li data-i18n="proj1"><strong style="color:var(--text)">Horror Game / Horror IEK</strong> — horror scene + game prototype</li>
+          <li data-i18n="proj2"><strong style="color:var(--text)">ProjectDelta</strong> — my IEK school project</li>
+          <li data-i18n="proj3"><strong style="color:var(--text)">Maze Project</strong> — maze gameplay exploration</li>
+          <li data-i18n="proj4"><strong style="color:var(--text)">From 3D to 2D Sprites</strong> — sprite conversion experiment</li>
+          <li data-i18n="proj5"><strong style="color:var(--text)">Learning / TryingSht / My project 1-2</strong> — practice builds from courses</li>
+        </ul>
+        <p style="margin-top:.8rem"><strong data-i18n="proj-blenderh">🧊 Blender Work</strong></p>
+        <p class="muted" data-i18n="proj-blenderd">Low-poly props &amp; characters — a full IEK classroom set (chairs, desks, PCs), swords, brick walls, houses, player character models:</p>
+        <div style="margin-top:.6rem">
+          <span class="chip" data-i18n="p-chip1">Chair / Desk / PC (IEK set)</span>
+          <span class="chip" data-i18n="p-chip2">Longsword</span>
+          <span class="chip" data-i18n="p-chip3">Houses &amp; furniture</span>
+          <span class="chip" data-i18n="p-chip4">Player models</span>
+          <span class="chip" data-i18n="p-chip5">Map blocks</span>
+        </div>
+      </div>
+    </section>
 
-        <li>
-          <strong>Project Three</strong> – This was my first project, not much to say here it speaks for itself.
-          <br>
-          <img src="3.png" class="project-img">
-        </li>
-      </ul>
+    <section aria-labelledby="t-goals">
+      <h2 class="sec-title" id="t-goals"><span class="bar" aria-hidden="true"></span><span data-i18n="t-goals">My Goals</span></h2>
+      <div class="card">
+        <div class="goal">
+          <div class="num" aria-hidden="true">1</div>
+          <div class="txt">
+            <strong data-i18n="g1-t">Finish the internship</strong>
+            <span class="muted" data-i18n="g1-d">Land one, crush it, and finally close that chapter.</span>
+          </div>
+        </div>
+        <div class="goal">
+          <div class="num" aria-hidden="true">2</div>
+          <div class="txt">
+            <strong data-i18n="g2-t">Stock up on money</strong>
+            <span class="muted" data-i18n="g2-d">Throw a lot of cash at serious upgrades.</span>
+          </div>
+        </div>
+        <div class="goal">
+          <div class="num" aria-hidden="true">3</div>
+          <div class="txt">
+            <strong data-i18n="g3-t">Car + another motorbike</strong>
+            <span class="muted" data-i18n="g3-d">Buy them and fully upgrade both — a <em>serious</em> amount of upgrades 🏍️</span>
+          </div>
+        </div>
+        <div class="goal">
+          <div class="num" aria-hidden="true">4</div>
+          <div class="txt">
+            <strong data-i18n="g4-t">Study Motors &amp; get the paper</strong>
+            <span class="muted" data-i18n="g4-d">After the internship, start studying motors for a proper Mechanics certification.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="t-contact">
+      <h2 class="sec-title" id="t-contact"><span class="bar" aria-hidden="true"></span><span data-i18n="t-contact">Get in touch</span></h2>
+      <div class="card">
+        <p class="muted" data-i18n="contact-line">GitHub: hosting this page &amp; future projects.</p>
+        <p style="margin-top:.6rem" class="muted">
+          📧 <a href="mailto:grthomas2016yt@gmail.com" style="color:var(--accent)">grthomas2016yt@gmail.com</a> ·
+          💻 <a href="https://github.com/Benoukos" target="_blank" rel="noopener nofollow" style="color:var(--accent)">github.com/Benoukos</a> ·
+          🎮 <span style="color:var(--text)">Discord: <strong style="color:var(--accent)">codebearer</strong></span> ·
+          📸 <a href="https://www.instagram.com/sprinter__r/" target="_blank" rel="me noopener" style="color:var(--accent)">@sprinter__r</a>
+        </p>
+        <a class="btn" href="CV.html" data-i18n="cv-btn">📄 Download my CV</a>
+      </div>
     </section>
 
     <footer>
-      © 2025 Thomas Benos. All rights reserved.
+      <span data-i18n="footer">Thomas Benos · Unity Game Developer · Greece 🏍️</span>
     </footer>
 
   </div>
+  </main>
+  </div>
+
+  <script>
+    const I18N = {
+      en: {
+        'tagline': 'Unity Game Developer &amp; Future Mechanic',
+        'chip-greece': 'Greece',
+        'chip-age': '~21 years old',
+        'chip-school': 'IEK Delta 360 — almost done',
+        'chip-intern': 'Looking for an internship',
+        'available': 'Available for internship — ready to start ASAP',
+        't-who': 'Who I am',
+        't-specialty': 'My Specialty',
+        't-know': 'What I Know',
+        't-projects': 'My Projects',
+        't-goals': 'My Goals',
+        't-contact': 'Get in touch',
+        'who': 'Hey! I\'m <strong>Thomas Benos</strong>, a 21-year-old game developer from Greece. I\'m wrapping up my studies at <strong>IEK Delta 360</strong> and I\'m on the hunt for an internship to get my foot in the door. I love building games, making 3D art, and spending way too much time on anything with wheels and an engine.',
+        'spec1': '🎮 Unity Video Game Developer',
+        'spec1d': 'I develop games end-to-end — code, gameplay, and the 3D assets that bring it to life.',
+        'spec2': '🌐 Webpages',
+        'spec2d': 'I build websites with HTML, CSS and JS — like this very page! 😄',
+        's-c': 'C', 's-cpp': 'C++', 's-cs': 'C#', 's-html': 'HTML', 's-css': 'CSS',
+        's-js': 'JS', 's-java': 'JAVA', 's-py': 'Python', 's-web': 'Webpages',
+        's-blender': 'Blender 3D', 's-mech': 'Motorcycle basics', 's-ai': 'AI collab 🧠',
+        's-video': 'Video editing 🎬', 's-photo': 'Photo editing 📸',
+        's-sound': 'Sound editing 🎧', 's-git': 'Git',
+        'ai': '<strong>🤖 AI-assisted development</strong> — I work with AI tools daily and I\'m not shy about it. I always include my AI brothers — without them I\'d be slow. Using AI as a teammate to write, debug and speed up code is a real skill — and one I use in every project.',
+        'blender': '<strong>🟠 Blender</strong> — low-poly <span class="muted">&amp;</span> mid-high poly 3D modeling',
+        'mech': '<strong>🏍️ Mechanics</strong> — motorcycle engine basics (very low-level mechanic)',
+        'proj-unityh': '🎮 Unity Games',
+        'proj-unityd': 'A bunch of Unity experiments, course follow-alongs and my own builds — pistol props, mazes, horror scenes, 3D-to-2D sprite tests, and more:',
+        'proj1': '<strong style="color:#e6edf3">Horror Game / Horror IEK</strong> — horror scene + game prototype',
+        'proj2': '<strong style="color:#e6edf3">ProjectDelta</strong> — my IEK school project',
+        'proj3': '<strong style="color:#e6edf3">Maze Project</strong> — maze gameplay exploration',
+        'proj4': '<strong style="color:#e6edf3">From 3D to 2D Sprites</strong> — sprite conversion experiment',
+        'proj5': '<strong style="color:#e6edf3">Learning / TryingSht / My project 1-2</strong> — practice builds from courses',
+        'proj-blenderh': '🧊 Blender Work',
+        'proj-blenderd': 'Low-poly props &amp; characters — a full IEK classroom set (chairs, desks, PCs), swords, brick walls, houses, player character models:',
+        'p-chip1': 'Chair / Desk / PC (IEK set)', 'p-chip2': 'Longsword',
+        'p-chip3': 'Houses &amp; furniture', 'p-chip4': 'Player models', 'p-chip5': 'Map blocks',
+        'g1-t': 'Finish the internship', 'g1-d': 'Land one, crush it, and finally close that chapter.',
+        'g2-t': 'Stock up on money', 'g2-d': 'Throw a lot of cash at serious upgrades.',
+        'g3-t': 'Car + another motorbike', 'g3-d': 'Buy them and fully upgrade both — a <em>serious</em> amount of upgrades 🏍️',
+        'g4-t': 'Study Motors &amp; get the paper', 'g4-d': 'After the internship, start studying motors for a proper Mechanics certification.',
+        'contact-line': 'GitHub: hosting this page &amp; future projects.',
+        'cv-btn': '📄 Download my CV',
+        'footer': 'Thomas Benos · Unity Game Developer · Greece 🏍️'
+      },
+      el: {
+        'tagline': 'Unity Game Developer &amp; Μελλοντικός Μηχανικός',
+        'chip-greece': 'Ελλάδα',
+        'chip-age': '~21 ετών',
+        'chip-school': 'IEK Delta 360 — σχεδόν τελειώνω',
+        'chip-intern': 'Ψάχνω για πρακτική',
+        'available': 'Διαθέσιμος για πρακτική — έτοιμος να ξεκινήσω άμεσα',
+        't-who': 'Ποιος είμαι',
+        't-specialty': 'Η Ειδικότητά μου',
+        't-know': 'Τι Ξέρω',
+        't-projects': 'Τα Projects μου',
+        't-goals': 'Οι Στόχοι μου',
+        't-contact': 'Επικοινωνία',
+        'who': 'Γεια σου! Είμαι ο <strong>Thomas Benos</strong>, developer βιντεοπαιχνιδιών από την Ελλάδα. Τελειώνω τις σπουδές μου στο <strong>IEK Delta 360</strong> και ψάχνω για πρακτική για να «ανοίξω την πόρτα». Μου αρέσει να φτιάχνω παιχνίδια, να φτιάχνω 3D μοντέλα και να ασχολούμαι με οτιδήποτε έχει ρόδες και μηχανή.',
+        'spec1': '🎮 Unity Developer Βιντεοπαιχνιδιών',
+        'spec1d': 'Αναπτύσσω παιχνίδια από την αρχή έως το τέλος — κώδικας, gameplay και τα 3D assets που τα ζωντανεύουν.',
+        'spec2': '🌐 Ιστοσελίδες',
+        'spec2d': 'Φτιάχνω ιστοσελίδες με HTML, CSS και JS — όπως αυτή εδώ τη σελίδα! 😄',
+        's-c': 'C', 's-cpp': 'C++', 's-cs': 'C#', 's-html': 'HTML', 's-css': 'CSS',
+        's-js': 'JS', 's-java': 'JAVA', 's-py': 'Python', 's-web': 'Ιστοσελίδες',
+        's-blender': 'Blender 3D', 's-mech': 'Μηχανική μοτό', 's-ai': 'Συνεργασία με AI 🧠',
+        's-video': 'Μοντάζ 🎬', 's-photo': 'Φωτοεπεξεργασία 📸',
+        's-sound': 'Επεξεργασία ήχου 🎧', 's-git': 'Git',
+        'ai': '<strong>🤖 Ανάπτυξη με βοήθεια AI</strong> — δουλεύω με εργαλεία AI καθημερινά και δεν το κρύβω. Πάντα βάζω και τους AI αδερφούς μου — χωρίς αυτούς θα ήμουν αργός. Το να χρησιμοποιείς το AI ως σύντροφο για να γράφεις, διορθώνεις και επιταχύνεις κώδικα είναι πραγματική δεξιότητα — και τη χρησιμοποιώ σε κάθε project.',
+        'blender': '<strong>🟠 Blender</strong> — low-poly <span class="muted">&amp;</span> mid-high poly μοντελοποίηση 3D',
+        'mech': '<strong>🏍️ Μηχανική</strong> — βασικά μηχανής μοτοσυκλέτας (πολύ βασικό επίπεδο)',
+        'proj-unityh': '🎮 Παιχνίδια Unity',
+        'proj-unityd': 'Μια σειρά από Unity πειράματα, follow-along σε courses και δικά μου builds — props, λαβύρινθοι, horror σκηνές, δοκιμές 3D-to-2D sprites και άλλα:',
+        'proj1': '<strong style="color:#e6edf3">Horror Game / Horror IEK</strong> — horror σκηνή + prototype παιχνιδιού',
+        'proj2': '<strong style="color:#e6edf3">ProjectDelta</strong> — το σχολικό μου project στο IEK',
+        'proj3': '<strong style="color:#e6edf3">Maze Project</strong> — εξερεύνηση gameplay με λαβύρινθους',
+        'proj4': '<strong style="color:#e6edf3">From 3D to 2D Sprites</strong> — πείραμα μετατροπής sprites',
+        'proj5': '<strong style="color:#e6edf3">Learning / TryingSht / My project 1-2</strong> — εξασκητικά builds από courses',
+        'proj-blenderh': '🧊 Δουλειά στο Blender',
+        'proj-blenderd': 'Low-poly props &amp; χαρακτήρες — ολοκληρωμένο σετ για τάξη IEK (καρέκλες, γραφεία, υπολογιστές), σπαθιά, τοίχοι από τούβλα, σπίτια, player models:',
+        'p-chip1': 'Καρέκλα / Γραφείο / PC (σετ IEK)', 'p-chip2': 'Longsword',
+        'p-chip3': 'Σπίτια &amp; έπιπλα', 'p-chip4': 'Player models', 'p-chip5': 'Map blocks',
+        'g1-t': 'Τελειώσω την πρακτική', 'g1-d': 'Βρω μια, τα καταφέρω και κλείσω αυτό το κεφάλαιο.',
+        'g2-t': 'Μαζέψω λεφτά', 'g2-d': 'Ρίξω πολλά χρήματα σε σοβαρά upgrades.',
+        'g3-t': 'Αυτοκίνητο + άλλη μοτοσυκλέτα', 'g3-d': 'Να τα αγοράσω και να τα αναβαθμίσω και τα δύο — <em>σοβαρά</em> πολλά upgrades 🏍️',
+        'g4-t': 'Σπουδάσω Μηχανές &amp; πάρω το πτυχίο', 'g4-d': 'Μετά την πρακτική, να ξεκινήσω τις μηχανές για σωστή πιστοποίηση στη Μηχανική.',
+        'contact-line': 'GitHub: φιλοξενεί αυτή τη σελίδα &amp; μελλοντικά projects.',
+        'cv-btn': '📄 Κατέβασε το CV μου',
+        'footer': 'Thomas Benos · Unity Game Developer · Ελλάδα 🏍️'
+      }
+    };
+
+    const els = document.querySelectorAll('[data-i18n]');
+    const langBtn = document.getElementById('langBtn');
+    const langStatus = document.getElementById('langStatus');
+    let lang = 'en';
+
+    function setLang(l){
+      lang = l;
+      const dict = I18N[l];
+      els.forEach(el => { el.innerHTML = dict[el.dataset.i18n] || el.dataset.i18n; });
+      document.documentElement.lang = l;
+      document.title = l === 'el'
+        ? 'Thomas Benos — Developer Βιντεοπαιχνιδιών Unity | Ελλάδα'
+        : 'Thomas Benos — Unity Game Developer | Greece';
+      langBtn.textContent = l === 'en' ? 'ΕΛ' : 'EN';
+      langBtn.setAttribute('aria-pressed', l === 'el');
+      langBtn.setAttribute('aria-label',
+        l === 'en' ? 'Ελληνικά' : 'English');
+      langStatus.textContent = l === 'en' ? 'Language: English' : 'Γλώσσα: Ελληνικά';
+      try { localStorage.setItem('tb-lang', l); } catch(e){}
+    }
+
+    langBtn.addEventListener('click', () => setLang(lang === 'en' ? 'el' : 'en'));
+
+    try { const saved = localStorage.getItem('tb-lang'); if (saved) lang = saved; } catch(e){}
+    setLang(lang);
+  </script>
+
+  <script>
+    const canvas = document.getElementById('starts');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+    let W, H;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function resize() {
+      W = canvas.width = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+    }
+
+    function makeStar(falling) {
+      return {
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 1.6 + 0.4,
+        vy: falling ? Math.random() * 0.9 + 0.25 : Math.random() * 0.12 + 0.03,
+        vx: falling ? Math.random() * 0.6 - 0.3 : 0,
+        tw: Math.random() * Math.PI * 2
+      };
+    }
+
+    function init() {
+      resize();
+      const count = W < 700 ? 90 : 160;
+      stars = [];
+      for (let i = 0; i < count; i++) stars.push(makeStar(false));
+      for (let i = 0; i < 6; i++) stars.push(makeStar(true));
+    }
+
+    function drawStatic() {
+      init();
+      ctx.clearRect(0, 0, W, H);
+      stars.forEach(s => {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(174, 203, 255,0.5)';
+        ctx.fill();
+      });
+    }
+
+    function frame() {
+      ctx.clearRect(0, 0, W, H);
+      for (let i = 0; i < stars.length; i++) {
+        const s = stars[i];
+        s.y += s.vy;
+        s.x += s.vx;
+        s.tw += 0.05;
+        if (s.y > H + 5 || s.x < -5 || s.x > W + 5) {
+          stars[i] = makeStar(s.vy > 0.3);
+          continue;
+        }
+        const a = 0.35 + 0.55 * (0.5 + 0.5 * Math.sin(s.tw));
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(174, 203, 255,' + a + ')';
+        ctx.fill();
+        if (s.vy > 0.3 && s.vx < -0.05) {
+          ctx.beginPath();
+          ctx.moveTo(s.x, s.y);
+          ctx.lineTo(s.x - s.vx * 6, s.y - s.vy * 6);
+          ctx.strokeStyle = 'rgba(88,166,255,0.25)';
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+      requestAnimationFrame(frame);
+    }
+
+    window.addEventListener('resize', reduceMotion ? drawStatic : init);
+    if (reduceMotion) {
+      drawStatic();
+    } else {
+      init();
+      requestAnimationFrame(frame);
+    }
+  </script>
+
 </body>
 </html>
